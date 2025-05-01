@@ -1,6 +1,7 @@
 # Studio Blockchain Explorer
 
 A modern, feature-rich blockchain explorer for the Studio Blockchain network. This application allows users to explore blocks, transactions, addresses, tokens, and NFTs on the Studio Blockchain.
+Test it here https://studio-scan.com
 
 ## Features
 
