@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Studio Blockchain Explorer - The first Ethereum fork with on-chain neural networks and priority system gas fees. Explore blocks, transactions, addresses, tokens, NFTs, and AI-powered analytics on the Studio Blockchain network." />
+  <meta name="keywords" content="blockchain, explorer, Studio Blockchain, cryptocurrency, ethereum fork, neural networks, AI, blockchain analytics, gas optimization" />
+  <meta name="author" content="Studio Blockchain" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://studio-scan.com" />
+  <title>Studio Blockchain Explorer - AI-Powered Blockchain Analytics</title>
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Studio Blockchain Explorer - AI-Powered Blockchain Analytics" />
+  <meta property="og:description" content="Explore the first Ethereum fork with on-chain neural networks and priority system gas fees. View real-time blocks, transactions, addresses, tokens, and AI analytics." />
+  <meta property="og:image" content="/metadata1.png" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:url" content="https://studio-scan.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Studio Blockchain Explorer" />
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@StudioBlockchain" />
+  <meta name="twitter:creator" content="@StudioBlockchain" />
+  <meta name="twitter:title" content="Studio Blockchain Explorer - AI-Powered Blockchain Analytics" />
+  <meta name="twitter:description" content="Explore the first Ethereum fork with on-chain neural networks and priority system gas fees. View real-time blocks, transactions, addresses, tokens, and AI analytics." />
+  <meta name="twitter:image" content="/metadata2.png" />
+  <meta name="twitter:image:alt" content="Studio Blockchain Explorer interface showing AI-powered blockchain analytics" />
+  
+  <!-- Additional Meta Tags -->
+  <meta name="theme-color" content="#FF4C29" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Studio Blockchain" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="/studio-logo.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/studio-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/studio-logo.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="/studio-logo.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Custom Styles -->
+  <style>
+    /* Loading spinner styles */
+    .loading-spinner {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #FF4C29;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse-glow {
+      0% { filter: drop-shadow(0 0 5px rgba(255, 76, 41, 0.7)); }
+      50% { filter: drop-shadow(0 0 15px rgba(255, 76, 41, 0.9)); }
+      100% { filter: drop-shadow(0 0 5px rgba(255, 76, 41, 0.7)); }
+    }
+    
+    .animate-pulse-glow {
+      animation: pulse-glow 2s infinite;
+    }
+    
+    /* Initial loading screen */
+    #initial-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #121212;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    
+    #initial-loader img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      animation: pulse-glow 2s infinite;
+    }
+    
+    #initial-loader p {
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    
+    /* Base styles to prevent FOUC (Flash of Unstyled Content) */
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Initial loading screen -->
+  <div id="initial-loader">
+    <img src="/studio-logo.png" alt="Studio Blockchain" />
+    <div class="loading-spinner"></div>
+    <p>Loading Studio Blockchain Explorer...</p>
+  </div>
+  
+  <!-- React app root -->
+  <div id="root"></div>
+  
+  <!-- Script to hide loader when app is ready -->
+  <script>
+    window.addEventListener('load', function() {
+      // Hide loader after app is loaded
+      setTimeout(function() {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.5s ease-out';
+          setTimeout(function() {
+            loader.style.display = 'none';
+          }, 500);
+        }
+      }, 1000); // Add a small delay for better UX
+    });
+  </script>
+  
+  <!-- Main app script -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
