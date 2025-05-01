@@ -2,8 +2,6 @@
 
 A modern, feature-rich blockchain explorer for the Studio Blockchain network. This application allows users to explore blocks, transactions, addresses, tokens, and NFTs on the Studio Blockchain.
 
-![Studio Blockchain Explorer](public/studio-logo.png)
-
 ## Features
 
 - **Block Explorer**: View detailed information about blocks, including transactions, gas used, and more.
